@@ -1,0 +1,2728 @@
+<?xml version="1.0" ?>
+
+    <!-- this file is auto generated using pedsim_gazebo_plugin pkg -->    
+    <sdf version="1.5">
+      <world name="default">
+      
+      <!-- Ground Plane -->
+      
+      <include>
+        <uri>model://ground_plane</uri>
+      </include>
+    
+      <include>
+        <uri>model://sun</uri>
+      </include>
+
+     <model name="sick1_collision_model">
+        <pose>0 0 -100 0 0 0</pose>
+        <static>true</static>
+        <link name="link">
+          <collision name="link">
+            <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+            <geometry>
+              <box>
+                <size>0.44 1.62 0.60</size>
+              </box>
+            </geometry>
+          </collision>
+        </link>
+      </model>
+    <actor name="sick1">
+      <pose>
+        14
+        14
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+        
+          <target>
+            14
+            14
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            14
+            3
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            13
+            2
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            12
+            1
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            10
+            1
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            9.5
+            2
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            9
+            3
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            9
+            14
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            14
+            14
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+
+        <velocity>1</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>sick1_pose</link_name>
+            <model>
+              <model_name>sick1_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <model name="sick2_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="sick2">
+      <pose>
+        14        
+        0
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+        
+          <target>
+            14
+            0
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            14
+            -9
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            13
+            -9.5
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            12
+            -10
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            10
+            -10
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            9.5
+            -9.5
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            9
+            -9
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            9
+            0
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+        <velocity>1</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>sick2_pose</link_name>
+            <model>
+              <model_name>sick2_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+
+    <model name="sick3_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="sick3">
+      <pose>
+        7
+        7
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+        
+          <target>
+            7
+            7
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -9
+            7
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -9
+            6
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            7
+            6
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+
+        <velocity>1</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>sick3_pose</link_name>
+            <model>
+              <model_name>sick3_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <model name="sick4_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="sick4">
+      <pose>
+        2
+        7
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+        
+          <target>
+            2
+            7
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -3
+            7
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -3
+            -3
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -2
+            -3.5
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            -1
+            -4
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            0
+            -4
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            1
+            -3.5
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            2
+            -3
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+         
+        <velocity>1</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>sick4_pose</link_name>
+            <model>
+              <model_name>sick4_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <model name="nurse1_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="nurse1">
+      <pose>
+        1
+        4
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+        
+          <target>
+            1
+            4
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            1
+            -2
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -2
+            -2
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -2
+            4
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+        <velocity>1</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>nurse1_pose</link_name>
+            <model>
+              <model_name>nurse1_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <model name="nurse2_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="nurse2">
+      <pose>
+        0
+        14
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+        
+          <target>
+            0
+            14
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -3
+            12
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -3
+            9
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -3
+            14
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+    
+        <velocity>0.5</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>nurse2_pose</link_name>
+            <model>
+              <model_name>nurse2_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <model name="nurse3_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="nurse3">
+      <pose>
+        -8
+        14
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+        
+          <target>
+            -8
+            14
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -8
+            10
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -9.5
+            10
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -9
+            14
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+    
+        <velocity>0.5</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>nurse3_pose</link_name>
+            <model>
+              <model_name>nurse3_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <model name="nurse4_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="nurse4">
+      <pose>
+        -3
+        -6
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+          <target>
+            -3
+            -6
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            -3
+            -8
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -9
+            -8
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -9
+            -10.5
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -1
+            -8
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+
+        <velocity>1</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>nurse4_pose</link_name>
+            <model>
+              <model_name>nurse4_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <model name="nurse5_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="nurse5">
+      <pose>
+        2
+        -6
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+          <target>
+            2
+            -6
+            1
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            8
+            -10
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            6
+            -7
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            2
+            -9
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+      
+        <velocity>1</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>nurse5_pose</link_name>
+            <model>
+              <model_name>nurse5_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <model name="nurse6_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="nurse6">
+      <pose>
+        -8.5
+        3
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+          <target>
+            -8.5
+            3
+            1
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            -8.5
+            0
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -5.5
+            0
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -5.5
+            3
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        <velocity>0.5</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>nurse6_pose</link_name>
+            <model>
+              <model_name>nurse6_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+
+
+  
+    <model name="nurse6_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <actor name="nurse7">
+      <pose>
+        -5
+        -2
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://walk.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+          <target>
+            -5
+            -2
+            1
+            1.570796
+            -0.0
+            3.141593
+          </target>
+          <target>
+            -9
+            -2
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+        
+          <target>
+            -9
+            -6
+            1.0
+            1.570796
+            -0.0
+            3.141593
+          </target>
+
+        <velocity>0.5</velocity>
+        <obstacle_margin>1.25</obstacle_margin>
+        <obstacle>turtlebot3_burger</obstacle>
+        <obstacle>turtlebot3_burger_2</obstacle>
+        </plugin>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>nurse7_pose</link_name>
+            <model>
+              <model_name>nurse7_collision_model</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+    <!--
+      <model name="sick1_collision_model">
+        <pose>0 0 -100 0 0 0</pose>
+        <static>true</static>
+        <link name="link">
+          <collision name="link">
+            <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+            <geometry>
+              <box>
+                <size>0.44 1.62 0.60</size>
+              </box>
+            </geometry>
+          </collision>
+        </link>
+      </model>
+      <actor name="sick1">
+        <skin>
+          <filename>model://walk.dae</filename>
+        </skin>
+        <animation name="walking">
+          <filename>model://walk.dae</filename>
+          <interpolate_x>true</interpolate_x>
+        </animation>
+        <script>
+          <loop>true</loop>
+          <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walking">
+             <waypoint>
+                <time>0.0</time>
+                <pose>18 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>5.0</time>
+                <pose>18 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>15.0</time>
+                <pose>10 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>30.0</time>
+                <pose>10 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>40.0</time>
+                <pose>11 -10 0 0 0 -1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>50</time>
+                <pose>11 -10 0 0 0 -1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>60</time>
+                <pose>11 -10 0 0 0 -1.57</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+          <link_name>sick1_pose</link_name>
+          <model>
+            <model_name>sick1_collision_model</model_name>
+          </model>
+          </link>
+        </plugin>
+      </actor>
+      
+      <actor name="sick2">
+        <skin>
+          <filename>model://walk.dae</filename>
+        </skin>
+        <animation name="walking">
+          <filename>model://walk.dae</filename>
+          <interpolate_x>true</interpolate_x>
+        </animation>
+        <script>
+          <loop>true</loop>
+          <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walking">
+             <waypoint>
+                <time>0.0</time>
+                <pose>-1 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>1.0</time>
+                <pose>-1 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>2.0</time>
+                <pose>1 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>3.0</time>
+                <pose>1 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>4.0</time>
+                <pose>-1 -1 0 0 0 0</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+      </actor>
+
+    <model name="sick3_collision_model">
+        <pose>0 0 -100 0 0 0</pose>
+        <static>true</static>
+        <link name="link">
+          <collision name="link">
+            <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+            <geometry>
+              <box>
+                <size>0.44 1.62 0.60</size>
+              </box>
+            </geometry>
+          </collision>
+        </link>
+      </model>
+      <actor name="sick3">
+        <skin>
+          <filename>model://walk.dae</filename>
+        </skin>
+        <animation name="walking">
+          <filename>model://walk.dae</filename>
+          <interpolate_x>true</interpolate_x>
+        </animation>
+        <script>
+          <loop>true</loop>
+          <delay_start>10.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walking">
+             <waypoint>
+                <time>0.0</time>
+                <pose>18 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>5.0</time>
+                <pose>18 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>15.0</time>
+                <pose>10 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>28.0</time>
+                <pose>10 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>30.0</time>
+                <pose>10 1 0 0 0 1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>35.0</time>
+                <pose>9 7 0 0 0 1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>40.0</time>
+                <pose>5 7 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>45</time>
+                <pose>5 10 0 0 0 1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>50</time>
+                <pose>5 10 0 0 0 1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>55</time>
+                <pose>4 6 0 0 0 -1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>60</time>
+                <pose>0 6 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>70</time>
+                <pose>1 -4 0 0 0 -1.57</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+          <link_name>sick3_pose</link_name>
+          <model>
+            <model_name>sick3_collision_model</model_name>
+          </model>
+          </link>
+        </plugin>
+      </actor>
+
+    <model name="sick4_collision_model">
+        <pose>0 0 -100 0 0 0</pose>
+        <static>true</static>
+        <link name="link">
+          <collision name="link">
+            <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+            <geometry>
+              <box>
+                <size>0.44 1.62 0.60</size>
+              </box>
+            </geometry>
+          </collision>
+        </link>
+      </model>
+      <actor name="sick4">
+        <skin>
+          <filename>model://walk.dae</filename>
+        </skin>
+        <animation name="walking">
+          <filename>model://walk.dae</filename>
+          <interpolate_x>true</interpolate_x>
+        </animation>
+        <script>
+          <loop>true</loop>
+          <delay_start>21.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walking">
+             <waypoint>
+                <time>0.0</time>
+                <pose>18 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>5.0</time>
+                <pose>18 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>15.0</time>
+                <pose>10 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>28.0</time>
+                <pose>10 1 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>30.0</time>
+                <pose>10 1 0 0 0 1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>35.0</time>
+                <pose>9 7 0 0 0 1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>40.0</time>
+                <pose>5 7 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>45</time>
+                <pose>5 10 0 0 0 1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>50</time>
+                <pose>5 10 0 0 0 1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>55</time>
+                <pose>4 6 0 0 0 -1.57</pose>
+             </waypoint>
+             <waypoint>
+                <time>60</time>
+                <pose>0 6 0 0 0 3.14</pose>
+             </waypoint>
+             <waypoint>
+                <time>70</time>
+                <pose>1 -4 0 0 0 -1.57</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+          <link_name>sick4_pose</link_name>
+          <model>
+            <model_name>sick4_collision_model</model_name>
+          </model>
+          </link>
+        </plugin>
+      </actor>
+    -->
+     <model name='grey_wall_1'>
+      <static>1</static>
+      <link name='link'>
+    
+	  <pose frame=''>-10.0 0.0  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 30.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 30.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_2'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>2.5 -15.0  1.4 0 0 0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 25.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 25.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_3'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>2.5 15.0  1.4 0 0 -0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 25.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 25.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_4'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>15.0 9.0  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 12.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 12.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_5'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>15.0 -7.5  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 15.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 15.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_6'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>8.0 11.5  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 7.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 7.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_7'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>8.0 -4.0  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 18.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 18.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_8'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-9.5 8.0  1.4 0 0 -0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 1.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 1.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_9'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-5.0 8.0  1.4 0 0 -0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 4.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 4.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_10'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>1.0 8.0  1.4 0 0 0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 4.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 4.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_11'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>6.5 8.0  1.4 0 0 0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 3.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 3.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_12'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-4.0 11.5  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 7.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 7.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_13'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>2.0 11.5  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 7.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 7.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_14'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-7.0 5.0  1.4 0 0 0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 6.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 6.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_15'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-4.0 4.0  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 2.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 2.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_16'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-4.0 -1.0  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 4.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 4.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_17'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-4.0 -6.0  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 2.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 2.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_18'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>5.5 5.0  1.4 0 0 -0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 5.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 5.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_19'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>3.0 1.5  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 7.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 7.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_20'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>5.5 -2.0  1.4 0 0 0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 5.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 5.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_21'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-7.0 -1.0  1.4 0 0 -0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 6.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 6.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_22'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>-7.0 -7.0  1.4 0 0 -0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 6.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 6.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_23'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>1.5 -5.0  1.4 0 0 -0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 3.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 3.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_24'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>6.5 -5.0  1.4 0 0 0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 3.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 3.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_25'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>0.0 -8.0  1.4 0 0 1.57</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 6.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 6.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+     <model name='grey_wall_26'>
+      <static>1</static>
+      <link name='link'>
+      
+	  <pose frame=''>2.5 -11.0  1.4 0 0 -0.0</pose>
+    
+        <collision name='collision'>
+          <geometry>
+            <box>
+            
+	     <size> 25.0 .2  2.8 </size>
+
+      	   </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+            
+	     <size> 25.0 .2  2.8 </size>
+
+      	   </box>
+       </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    
+
+            <plugin name="ActorPosesPlugin" filename="libActorPosesPlugin.so">
+        </plugin>
+    
+    
+      </world>
+    </sdf>
+    
+        
